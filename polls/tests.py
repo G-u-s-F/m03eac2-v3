@@ -50,7 +50,6 @@ class MySeleniumTests(StaticLiveServerTestCase):
         self.assertEqual( self.selenium.title , "Site administration | Django site admin" )
 
         # comprovem si existeix el text del link i fem click a l'enllaç
-        #self.selenium.find_element(By.LINK_TEXT, 'View site').click()
         view_site_link = self.selenium.find_element(By.XPATH, "//div[@id='user-tools']/a[1]")
         url = view_site_link.get_attribute('href')
         hola = self.selenium.get(url)
